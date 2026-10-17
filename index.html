@@ -147,7 +147,7 @@ h2, .section-heading{
 
 .opening-card{
   width:min(580px, 100%);
-  padding:48px 28px;
+  padding:54px 28px 48px;
   text-align:center;
   color:#fff;
   border:1px solid rgba(223, 186, 115, 0.45);
@@ -157,14 +157,14 @@ h2, .section-heading{
   -webkit-backdrop-filter:blur(28px);
   box-shadow:0 35px 90px rgba(0,0,0,0.7);
   position:relative;
-  overflow:hidden;
+  overflow:visible;
 }
 
 /* Monogram Ring */
 .monogram-ring{
   width:160px;
   height:160px;
-  margin:0 auto 18px;
+  margin:10px auto 18px;
   border:1.5px solid rgba(223, 186, 115, 0.65);
   border-radius:50%;
   display:flex;
@@ -871,8 +871,8 @@ footer{
 }
 
 @media(max-width:700px){
-  .opening-card{padding:42px 18px}
-  .monogram-ring{width:145px;height:145px}
+  .opening-card{padding:48px 18px 42px}
+  .monogram-ring{width:145px;height:145px;margin-top:8px}
   .mono{font-size:27px;padding:0 8px}
   .section{padding:70px 18px}
   .couple{grid-template-columns:1fr;gap:18px}
@@ -1100,7 +1100,7 @@ if('IntersectionObserver' in window){
   </div>
 </section>
 
-  <!-- Ceremony & Program Timeline -->
+<!-- Ceremony & Program Timeline -->
 <section class="section reveal">
   <div class="section-label shimmer-text">The celebration begins</div>
   <h2>Ceremony &amp; Program</h2>
