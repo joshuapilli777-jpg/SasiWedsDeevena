@@ -132,11 +132,12 @@ h2, .section-heading{
   z-index:1000;
   display:grid;
   place-items:center;
-  padding:24px;
+  padding:20px;
   background:
     radial-gradient(circle at 50% 25%, rgba(223, 186, 115, 0.22), transparent 48%),
     linear-gradient(145deg, #05080e, #0f1724 55%, #1a273b);
   transition:opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.6s;
+  overflow-y:auto;
 }
 #open-toggle{position:absolute;opacity:0;width:1px;height:1px;pointer-events:none;}
 #open-toggle:checked ~ #opening{
@@ -146,8 +147,9 @@ h2, .section-heading{
 }
 
 .opening-card{
-  width:min(580px, 100%);
-  padding:54px 28px 48px;
+  width:min(540px, 100%);
+  margin:auto;
+  padding:44px 24px 38px;
   text-align:center;
   color:#fff;
   border:1px solid rgba(223, 186, 115, 0.45);
@@ -162,9 +164,9 @@ h2, .section-heading{
 
 /* Monogram Ring */
 .monogram-ring{
-  width:160px;
-  height:160px;
-  margin:10px auto 18px;
+  width:140px;
+  height:140px;
+  margin:18px auto 14px;
   border:1.5px solid rgba(223, 186, 115, 0.65);
   border-radius:50%;
   display:flex;
@@ -184,11 +186,15 @@ h2, .section-heading{
   color:var(--gold-mid);
   background:#090e17;
   padding:0 8px;
+  z-index:2;
 }
-@keyframes monogramFloat{50%{transform:translateY(-6px) scale(1.02)}}
+@keyframes monogramFloat{
+  0%, 100%{transform:translateY(0) scale(1)}
+  50%{transform:translateY(4px) scale(1.01)}
+}
 
 .mono{
-  font-size:31px;
+  font-size:28px;
   line-height:1;
   white-space:nowrap;
   display:inline-block;
@@ -210,7 +216,7 @@ h2, .section-heading{
   align-items:center;
   justify-content:center;
   gap:12px;
-  margin:20px auto;
+  margin:18px auto;
 }
 .ornament span.line{
   width:80px;
@@ -227,7 +233,7 @@ h2, .section-heading{
 .open-verse{
   margin:0 auto 8px;
   max-width:470px;
-  font:italic 25px/1.45 "Cormorant Garamond", serif;
+  font:italic 23px/1.45 "Cormorant Garamond", serif;
   color:#fae6b1;
 }
 .open-ref{
@@ -239,12 +245,12 @@ h2, .section-heading{
 
 .open-btn{
   display:inline-block;
-  margin-top:28px;
+  margin-top:24px;
   color:#090e17;
   background:var(--gold-gradient);
   border:1px solid #fae6b1;
   border-radius:999px;
-  padding:15px 36px;
+  padding:14px 34px;
   cursor:pointer;
   font-family:'Cinzel', serif;
   font-size:11px;
@@ -871,9 +877,22 @@ footer{
 }
 
 @media(max-width:700px){
-  .opening-card{padding:48px 18px 42px}
-  .monogram-ring{width:145px;height:145px;margin-top:8px}
-  .mono{font-size:27px;padding:0 8px}
+  .opening-card{
+    padding:40px 16px 32px;
+    width:94%;
+  }
+  .monogram-ring{
+    width:125px;
+    height:125px;
+    margin:14px auto 12px;
+  }
+  .mono{
+    font-size:25px;
+    padding:0 6px;
+  }
+  .open-verse{
+    font-size:20px;
+  }
   .section{padding:70px 18px}
   .couple{grid-template-columns:1fr;gap:18px}
   .count{gap:8px}
